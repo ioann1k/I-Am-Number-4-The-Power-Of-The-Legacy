@@ -44,3 +44,9 @@ TagManager:
   - name: Player
     uniqueID: 1973936893
     locked: 0
+  - name: Forest
+    uniqueID: 2949854861
+    locked: 0
+  - name: School
+    uniqueID: 1742685475
+    locked: 0
