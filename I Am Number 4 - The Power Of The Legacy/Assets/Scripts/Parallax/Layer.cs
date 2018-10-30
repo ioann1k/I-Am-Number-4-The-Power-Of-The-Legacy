@@ -12,8 +12,11 @@ public class Layer
     public List<GameObject> sprites;
 
     [Tooltip("The speed at which this object moves in relation to the speed of the parallax.")]
-    [Range(0.0f, 1.0f)]
+    [Range(0.0f, 5.0f)]
     public float speedRatio;
+
+    [Tooltip("If the sprite should be placed randomly on the map.")]
+    public bool shouldBeSpawnedRandomly = false;
 
     private const float widthOfSprite = 19.2f;
 
@@ -36,13 +39,15 @@ public class Layer
             index = UnityEngine.Random.Range(0, sprites.Count);
         }
 
+        GameObject currentSprite = sprites[index];
+
         // Instantiate a new sprite and get its renderer component
-        GameObject spawnSprite = GameObject.Instantiate(sprites[index]) as GameObject;
+        GameObject spawnSprite = GameObject.Instantiate(currentSprite) as GameObject;
         Renderer spriteRenderer = spawnSprite.GetComponent<Renderer>();
 
         // Position the newly created sprite
-        spawnSprite.transform.parent = sprites[index].transform.parent;
-        spawnSprite.transform.position = new Vector3(xPosition, 0f, 0f);
+        spawnSprite.transform.parent = currentSprite.transform.parent;
+        spawnSprite.transform.position = new Vector3(xPosition, currentSprite.transform.position.y, currentSprite.transform.position.z);
 
         // Show the sprite renderer
         spriteRenderer.enabled = true;
@@ -70,7 +75,7 @@ public class Layer
                 }
 
                 // if the right side of the current sprite renderer is at the left side of the camera, remove the sprite renderer from the list, spawn a new sprite and destroy the gameobject
-                if (spriteRenderer.transform.position.x <= -widthOfSprite)
+                if (spriteRenderer.transform.position.x + (spriteRenderer.bounds.size.x / 2) <= -(widthOfSprite / 2))
                 {
                     float newPosition = spriteRenderer.transform.position.x + (widthOfSprite * 2);
 
@@ -85,13 +90,22 @@ public class Layer
         return spriteToDestroy;
     }
 
+    public void RandomlySpawn()
+    {
+        int halfWidthOfSprite = (int)widthOfSprite / 2;
+        System.Random randomGenerator = new System.Random();
+        int randomPosition = randomGenerator.Next(-halfWidthOfSprite, halfWidthOfSprite);
+
+        Spawn(randomPosition);
+    }
+
     /// <summary>
     /// Move the sprite renderers.
     /// </summary>
     /// <param name="parallaxManager">The parallax.</param>
     /// <param name="camera">The main camera.</param>
     /// <param name="time">Time.deltaTime multiplied by the global parallax scroll speed.</param>
-    public void Update(Parallax parallaxManager, Camera camera, float time)
+    public void Update(ParallaxManager parallaxManager, Camera camera, float time)
     {
         foreach (Renderer spriteRenderer in spriteRenderers.ToArray())
         {

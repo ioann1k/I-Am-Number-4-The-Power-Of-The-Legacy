@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Name: l-leg
   m_EditorClassIdentifier: 
   m_ApiVersion: 4
-  m_Sprite: {fileID: 21300000, guid: 99e37dfaa22030043810221864e5366a, type: 3}
+  m_Sprite: {fileID: 21300000, guid: cd3e9a7028b837045915478dcd13fcd2, type: 3}
   m_SharedMesh: {fileID: 43801624184214256}
   pivotPoint: {x: 0, y: 0}
   texVertices: []
