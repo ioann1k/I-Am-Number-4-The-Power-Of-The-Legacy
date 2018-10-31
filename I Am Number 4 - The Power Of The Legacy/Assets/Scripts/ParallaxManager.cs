@@ -13,15 +13,7 @@ public class ParallaxManager : MonoBehaviour
     [Tooltip("The list of all the forest layers in the parallax.")]
     public List<Layer> forestLayers;
 
-    [Tooltip("The list of all the school layers in the parallax.")]
-    public List<Layer> schoolLayers;
-
     private float initialScrollSpeed = 6.0f;
-
-    private int forestSpawnCount = 0;
-    private int maxForestSpawnCount = 4;
-    
-    private bool shouldUpdateSchool = false;
 
     /// <summary>
     /// Setup the layers.
@@ -42,8 +34,6 @@ public class ParallaxManager : MonoBehaviour
 
             CheckPosition(forestLayer);
         }
-
-        forestSpawnCount++;
     }
 
     /// <summary>
@@ -52,37 +42,12 @@ public class ParallaxManager : MonoBehaviour
     void Update()
     {
         float time = Time.deltaTime * scrollSpeed;
-        if (forestSpawnCount == maxForestSpawnCount)
+        foreach (Layer forestLayer in forestLayers)
         {
-            InitializeSchool();
+            CheckPosition(forestLayer);
 
-            forestSpawnCount = 0;
+            forestLayer.Update(this, mainCamera, time);
         }
-        else
-        {
-            foreach (Layer forestLayer in forestLayers)
-            {
-                CheckPosition(forestLayer);
-
-                forestLayer.Update(this, mainCamera, time);
-            }
-        }
-
-        if (shouldUpdateSchool)
-        {
-            foreach (Layer forestLayer in forestLayers)
-            {
-                CheckPosition(forestLayer);
-
-                forestLayer.Update(this, mainCamera, time);
-            }
-        }
-    }
-
-    private void InitializeSchool()
-    {
-
-        shouldUpdateSchool = true;
     }
 
     private void CheckPosition(Layer layer)
@@ -91,8 +56,6 @@ public class ParallaxManager : MonoBehaviour
         if (spriteToDestroy != null)
         {
             Destroy(spriteToDestroy);
-
-            forestSpawnCount++;
         }
     }
 }
