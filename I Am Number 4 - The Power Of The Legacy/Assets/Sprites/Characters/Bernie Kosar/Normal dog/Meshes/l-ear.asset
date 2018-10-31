@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Name: l-ear
   m_EditorClassIdentifier: 
   m_ApiVersion: 4
-  m_Sprite: {fileID: 21300000, guid: 2d632bff1a054d64092d6723f4f9b0b8, type: 3}
+  m_Sprite: {fileID: 21300000, guid: f5a2d979cb53c9647a935b4542923f22, type: 3}
   m_SharedMesh: {fileID: 43759706770406998}
   pivotPoint: {x: 0, y: 0}
   texVertices: []
