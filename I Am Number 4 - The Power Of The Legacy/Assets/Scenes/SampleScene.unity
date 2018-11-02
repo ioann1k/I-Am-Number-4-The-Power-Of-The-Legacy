@@ -5382,7 +5382,7 @@ SkinnedMeshRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -1345112435
   m_SortingLayer: 2
-  m_SortingOrder: 20
+  m_SortingOrder: 19
   serializedVersion: 2
   m_Quality: 0
   m_UpdateWhenOffscreen: 0
@@ -5413,7 +5413,7 @@ MonoBehaviour:
   m_Materials:
   - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
   m_SortingLayerID: -1345112435
-  m_SortingOrder: 20
+  m_SortingOrder: 19
   m_Bones: []
   m_BoneTransforms:
   - {fileID: 749676564}
