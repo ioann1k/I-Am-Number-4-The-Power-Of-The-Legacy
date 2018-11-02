@@ -8,6 +8,6 @@ public class MainMenu : MonoBehaviour
 {
     public void OnStartClick()
     {
-        SceneManager.LoadScene("SampleScene");
+        SceneManager.LoadScene("Game");
     }
 }

@@ -19,6 +19,7 @@ public class Layer
     public bool shouldBeSpawnedRandomly = false;
 
     private const float widthOfSprite = 19.2f;
+    private float previousSpritePosition = 0f;
 
     /// <summary>
     /// Spawn a new sprite in the map.
@@ -111,5 +112,31 @@ public class Layer
         {
             spriteRenderer.transform.Translate(time * -speedRatio, 0.0f, 0.0f);
         }
+    }
+
+    public Renderer GetSpriteRendererAtIndex(int index)
+    {
+        return spriteRenderers[index];
+    }
+
+    public bool UpdateDistance(Renderer spriteRenderer)
+    {
+        int roundedMaxWidthOfSprite = (int)Mathf.Round(widthOfSprite);
+        int currentPosition = (int)Mathf.Round(spriteRenderer.transform.position.x);
+        currentPosition *= -1;
+
+        if (currentPosition - previousSpritePosition == 1)
+        {
+            //Debug.Break();
+            previousSpritePosition++;
+
+            return true;
+        }
+        else if (previousSpritePosition >= roundedMaxWidthOfSprite)
+        {
+            previousSpritePosition = 0f;
+        }
+
+        return false;
     }
 }

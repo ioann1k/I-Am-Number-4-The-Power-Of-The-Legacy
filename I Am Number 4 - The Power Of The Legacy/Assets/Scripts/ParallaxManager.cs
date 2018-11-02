@@ -13,6 +13,9 @@ public class ParallaxManager : MonoBehaviour
     [Tooltip("The list of all the forest layers in the parallax.")]
     public List<Layer> forestLayers;
 
+    [Tooltip("The list of all the layers in the parallax.")]
+    public Counter counter;
+
     private float initialScrollSpeed = 6.0f;
 
     /// <summary>
@@ -47,6 +50,16 @@ public class ParallaxManager : MonoBehaviour
             CheckPosition(forestLayer);
 
             forestLayer.Update(this, mainCamera, time);
+        }
+
+        Layer firstLayer = forestLayers[0];
+        Renderer spriteRenderer = firstLayer.GetSpriteRendererAtIndex(0);
+
+        bool shouldUpdateDistanceMeter = false;
+        shouldUpdateDistanceMeter = firstLayer.UpdateDistance(spriteRenderer);
+        if (shouldUpdateDistanceMeter)
+        {
+            counter.UpdateDistance();
         }
     }
 
