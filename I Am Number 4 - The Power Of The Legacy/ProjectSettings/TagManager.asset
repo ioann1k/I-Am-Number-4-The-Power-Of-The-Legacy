@@ -13,7 +13,7 @@ TagManager:
   - UI
   - 
   - 
-  - 
+  - Parallax
   - 
   - 
   - 
@@ -49,4 +49,10 @@ TagManager:
     locked: 0
   - name: School
     uniqueID: 1742685475
+    locked: 0
+  - name: Start Screen
+    uniqueID: 968259679
+    locked: 0
+  - name: UI
+    uniqueID: 2834439049
     locked: 0
