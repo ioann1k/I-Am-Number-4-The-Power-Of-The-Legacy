@@ -18,6 +18,8 @@ public class MainCharacter : MonoBehaviour
 
     public Transform groundCheck;
 
+    public HealthBar healthBar;
+
     private const float groundedRadius = 0.2f;
 
     private bool isOnGround = true;
@@ -106,5 +108,10 @@ public class MainCharacter : MonoBehaviour
                 isRollingOver = false;
             }
         }
+    }
+
+    public void LoseHealth(int amountOfHealthLost)
+    {
+        healthBar.LoseHealth(amountOfHealthLost);
     }
 }

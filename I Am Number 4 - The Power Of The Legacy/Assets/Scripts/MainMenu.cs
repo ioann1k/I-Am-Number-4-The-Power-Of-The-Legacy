@@ -10,4 +10,8 @@ public class MainMenu : MonoBehaviour
     {
         SceneManager.LoadScene("Game");
     }
+    public void OnRulesClick()
+    {
+        SceneManager.LoadScene("Rules");
+    }
 }

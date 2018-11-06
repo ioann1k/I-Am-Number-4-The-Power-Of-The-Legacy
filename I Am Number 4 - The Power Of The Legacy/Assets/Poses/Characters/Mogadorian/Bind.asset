@@ -13,54 +13,54 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_PoseEntries:
   - path: Bones/hip
-    localPosition: {x: -5.256481, y: 0.7655137, z: 0}
-    localRotation: {x: 0, y: 0, z: 0.71236265, w: 0.70181155}
+    localPosition: {x: 0.086814284, y: -0.6701772, z: 0}
+    localRotation: {x: 0, y: 0, z: 0.7232137, w: 0.69062436}
     localScale: {x: 1, y: 1, z: 1}
   - path: Bones/hip/torso
-    localPosition: {x: 0.37, y: 0, z: 0}
-    localRotation: {x: 0, y: 0, z: 0.020801987, w: 0.99978364}
+    localPosition: {x: 0.34999996, y: 0, z: 0}
+    localRotation: {x: 0, y: 0, z: 0.00000075290086, w: 1}
     localScale: {x: 1, y: 1, z: 1}
   - path: Bones/hip/torso/head
-    localPosition: {x: 1.0000002, y: -7.057679e-10, z: 0}
-    localRotation: {x: 0, y: 0, z: 0.02886842, w: 0.9995833}
+    localPosition: {x: 0.94999987, y: -1.6217986e-18, z: 0}
+    localRotation: {x: 0, y: 0, z: 0.00000014116904, w: 1}
     localScale: {x: 1, y: 1, z: 1}
-  - path: Bones/hip/torso/l-forearm
-    localPosition: {x: 0.89298904, y: 0.8856919, z: 0}
-    localRotation: {x: 0, y: 0, z: -0.99293464, w: 0.11866244}
+  - path: Bones/hip/torso/r-arm
+    localPosition: {x: 0.95914495, y: -0.2595147, z: 0}
+    localRotation: {x: 0, y: 0, z: -0.9595282, w: 0.28161252}
     localScale: {x: 1, y: 1, z: 1}
-  - path: Bones/hip/torso/l-forearm/l-arm
-    localPosition: {x: 0.84236264, y: -0.00000020861626, z: 0}
-    localRotation: {x: 0, y: 0, z: 0.710732, w: 0.7034629}
+  - path: Bones/hip/torso/r-arm/r-arm-2
+    localPosition: {x: 0.6448113, y: 0, z: 0}
+    localRotation: {x: 0, y: 0, z: 0.74298114, w: 0.6693124}
     localScale: {x: 1, y: 1, z: 1}
-  - path: Bones/hip/torso/r-forearm
-    localPosition: {x: 0.8781618, y: -0.17213583, z: 0}
-    localRotation: {x: 0, y: 0, z: -0.9237662, w: 0.38295698}
+  - path: Bones/hip/torso/l-arm
+    localPosition: {x: 0.8946216, y: 1.0044445, z: 0}
+    localRotation: {x: 0, y: 0, z: -0.9795715, w: 0.20109628}
     localScale: {x: 1, y: 1, z: 1}
-  - path: Bones/hip/torso/r-forearm/r-arm
-    localPosition: {x: 0.66937387, y: 0.000000059604645, z: 0}
-    localRotation: {x: 0, y: 0, z: 0.6801123, w: 0.7331079}
+  - path: Bones/hip/torso/l-arm/l-arm-2
+    localPosition: {x: 0.9553753, y: -0.000000059604645, z: 0}
+    localRotation: {x: 0, y: 0, z: 0.7347226, w: 0.67836773}
     localScale: {x: 1, y: 1, z: 1}
-  - path: Bones/hip/l-leg-1
-    localPosition: {x: -0.24003169, y: 0.36215478, z: 0}
-    localRotation: {x: 0, y: 0, z: 0.99471307, w: 0.10269347}
+  - path: Bones/hip/l-leg
+    localPosition: {x: -0.077556044, y: 0.3082832, z: 0}
+    localRotation: {x: 0, y: 0, z: 0.99866265, w: 0.05170002}
     localScale: {x: 1, y: 1, z: 1}
-  - path: Bones/hip/l-leg-1/l-leg-2
-    localPosition: {x: 0.59999996, y: 0.0000006556511, z: 0}
+  - path: Bones/hip/l-leg/l-leg-2
+    localPosition: {x: 0.69000024, y: 0.00000031292439, z: 0}
     localRotation: {x: 0, y: 0, z: 0, w: 1}
     localScale: {x: 1, y: 1, z: 1}
-  - path: Bones/hip/l-leg-1/l-leg-2/l-foot
-    localPosition: {x: 1.1800003, y: 0.00000014351028, z: 0}
-    localRotation: {x: 0, y: 0, z: 0.7332941, w: 0.67991155}
+  - path: Bones/hip/l-leg/l-leg-2/l-foot
+    localPosition: {x: 1.2600014, y: -0.00000078976154, z: 0}
+    localRotation: {x: 0, y: 0, z: -0.6803503, w: -0.7328871}
     localScale: {x: 1, y: 1, z: 1}
-  - path: Bones/hip/r-leg-1
-    localPosition: {x: -0.2650305, y: -0.14241025, z: 0}
-    localRotation: {x: 0, y: 0, z: 0.998568, w: -0.053498276}
+  - path: Bones/hip/r-leg
+    localPosition: {x: -0.09160435, y: -0.14916642, z: 0}
+    localRotation: {x: 0, y: 0, z: 0.9993134, w: 0.037050184}
     localScale: {x: 1, y: 1, z: 1}
-  - path: Bones/hip/r-leg-1/r-leg-2
-    localPosition: {x: 0.5104053, y: 0, z: 0}
-    localRotation: {x: 0, y: 0, z: -0.12379351, w: 0.992308}
+  - path: Bones/hip/r-leg/r-leg-2
+    localPosition: {x: 0.71581703, y: 0.000000014901161, z: 0}
+    localRotation: {x: 0, y: 0, z: 0, w: 1}
     localScale: {x: 1, y: 1, z: 1}
-  - path: Bones/hip/r-leg-1/r-leg-2/r-foot
-    localPosition: {x: 1.2410238, y: 0.000000284228, z: 0}
-    localRotation: {x: 0, y: 0, z: 0.7431683, w: 0.6691046}
+  - path: Bones/hip/r-leg/r-leg-2/r-foot
+    localPosition: {x: 1.061456, y: 0.0000000022725004, z: 0}
+    localRotation: {x: 0, y: 0, z: -0.6572133, w: -0.7537046}
     localScale: {x: 1, y: 1, z: 1}

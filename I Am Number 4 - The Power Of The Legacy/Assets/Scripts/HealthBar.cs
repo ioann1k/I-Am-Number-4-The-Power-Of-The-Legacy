@@ -59,16 +59,15 @@ public class HealthBar : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        RemoveHealth(1);
-        Debug.Break();
+
     }
 
-    public void RemoveHealth(int timesShot)
+    public void LoseHealth(int amountOfHealthLost)
     {
         if (healthBars.Count > 0)
         {
             int lengthOfHealthBars = healthBars.Count - 1;
-            for (int i = lengthOfHealthBars; i > lengthOfHealthBars - timesShot; i--)
+            for (int i = lengthOfHealthBars; i > lengthOfHealthBars - amountOfHealthLost; i--)
             {
                 GameObject currentHealthBarSingle = healthBars[i];
 
